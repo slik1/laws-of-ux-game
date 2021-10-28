@@ -1,0 +1,21 @@
+.definition-container {
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+
+    .title-holder{
+        width: 250px;
+        height: 100px;
+        background-color: #ccc;
+        border: 8px solid #78B516;
+        border-style: dashed;
+        border-radius: 1rem;
+        margin-right: 2rem;
+    }
+    .definition-text{
+        font-size: 1.3rem;
+        color: #fff;
+    }
+
+}

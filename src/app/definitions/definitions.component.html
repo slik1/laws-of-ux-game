@@ -1,5 +1,9 @@
-<ng-container *ngFor="let definition of definitions">
+<ng-container *ngFor="let definition of definitions; let i = index;">
     <app-definition
     [text]="definition.text"
+    [ngClass]="{'active': currentDefinitionIndex == i}"
     ></app-definition>
 </ng-container>
+
+<button (click)="prev()">Prev</button>
+<button (click)="next()">Next</button>

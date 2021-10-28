@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DefinitionComponent implements OnInit {
 
   @Input() text:string | undefined;
+  @Input() order:number | undefined;
 
   constructor() { }
 
