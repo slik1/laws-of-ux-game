@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { lawsData } from '../lawsData';
 @Component({
   selector: 'app-laws',
   templateUrl: './laws.component.html',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LawsComponent implements OnInit {
 
+  public laws = lawsData;
+  
   constructor() { }
 
   ngOnInit(): void {

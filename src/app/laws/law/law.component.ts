@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-law',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./law.component.scss']
 })
 export class LawComponent implements OnInit {
+
+  @Input() title: string | undefined;
+  @Input() image: string | undefined;
 
   constructor() { }
 

@@ -1,1 +1,6 @@
-<app-law></app-law>
+<ng-container *ngFor="let law of laws">
+    <app-law
+    [title]="law.title"
+    [image]="law.image">
+    </app-law>
+</ng-container>
