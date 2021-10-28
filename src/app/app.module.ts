@@ -4,10 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LawsComponent } from './laws/laws.component';
+import { LawComponent } from './laws/law/law.component';
+import { DefinitionsComponent } from './definitions/definitions.component';
+import { DefinitionComponent } from './definitions/definition/definition.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LawsComponent,
+    LawComponent,
+    DefinitionsComponent,
+    DefinitionComponent
   ],
   imports: [
     BrowserModule,
