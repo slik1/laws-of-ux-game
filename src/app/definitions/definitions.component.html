@@ -1,1 +1,5 @@
-<app-definition></app-definition>
+<ng-container *ngFor="let definition of definitions">
+    <app-definition
+    [text]="definition.text"
+    ></app-definition>
+</ng-container>
