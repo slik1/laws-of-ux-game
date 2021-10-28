@@ -1,8 +1,20 @@
-app-definition{
+app-definitions{
 
-    display: none;
-    &.active{
-        display: flex;
+    display: grid;
+    grid-template-columns: 1fr 780px 1fr;
+
+    button{
+        align-self: center;
+        justify-self: center;
     }
 
+    app-definition{
+    
+        display: none;
+        &.active{
+            display: flex;
+        }
+    
+    }
 }
+
