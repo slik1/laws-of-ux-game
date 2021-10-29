@@ -8,6 +8,7 @@ import { LawsComponent } from './laws/laws.component';
 import { LawComponent } from './laws/law/law.component';
 import { DefinitionsComponent } from './definitions/definitions.component';
 import { DefinitionComponent } from './definitions/definition/definition.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DefinitionComponent } from './definitions/definition/definition.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

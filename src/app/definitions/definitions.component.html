@@ -1,13 +1,24 @@
-
 <button (click)="prev()">Prev</button>
 
 <div class="middle">
-    <ng-container *ngFor="let definition of definitions; let i = index;">
-        <app-definition
-        [text]="definition.text"
-        [ngClass]="{'active': currentDefinitionIndex == i}"
-        ></app-definition>
-    </ng-container>
+    <div class="list" 
+    *ngFor="let definition of definitions; let i = index;"
+    cdkDropList
+    cdkDropListConnectedTo="lawsList"
+    [cdkDropListData]="definitions"
+    (cdkDropListDropped)="drop($event)"
+    [cdkDropListEnterPredicate]="definitionPredicate"
+    >
+        
+        <div class="definition-container" [ngClass]="{'active1': currentDefinitionIndex == i}">
+            <div class="title-holder">{{definition.answer}}</div>
+            <!-- <div class="example-custom-placeholder" *cdkDragPlaceholder></div> -->
+            <div class="definition-text">
+                {{definition.text}}
+            </div>
+        </div>
+        
+    </div>
 </div>
 
 <button (click)="next()">Next</button>

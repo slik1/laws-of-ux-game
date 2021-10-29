@@ -1,6 +1,34 @@
-<ng-container *ngFor="let law of laws">
-    <app-law
-    [title]="law.title"
-    [image]="law.image">
-    </app-law>
-</ng-container>
+<!-- <div cdkDropList
+id="lawsList"
+cdkDropListConnectedTo="definitionsList"
+(cdkDropListDropped)="drop($event)"
+[cdkDropListData]="laws"
+> -->
+
+<div 
+cdkDropList 
+[cdkDropListData]="laws" 
+*ngFor="let law of laws"
+[cdkDropListEnterPredicate]="isCorrectPredicate"
+>
+
+    <div class="law-container" cdkDrag [cdkDragData]="law">
+        <!-- <img src="{{image}}"> -->
+        <div class="title">{{law.name}}</div>
+    </div>
+
+</div>
+
+<!-- </div> -->
+
+
+
+<!-- <app-law cdkDropList
+id="lawsList"
+cdkDropListConnectedTo="definitionsList"
+(cdkDropListDropped)="drop($event)"
+[cdkDropListData]="laws"
+[title]="law"
+[cdkDropListEnterPredicate]="noReturnPredicate"
+>
+</app-law> -->
